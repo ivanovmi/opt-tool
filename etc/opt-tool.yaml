@@ -1,0 +1,18 @@
+packages:
+  - name: glance
+    components:
+      - api:
+        - version: 1
+          entity:
+            - controller
+            - images
+            - members
+            - router
+        - version: 2
+          entity:
+            - images
+            - router
+      - db
+      - common
+      - registry
+  - name: python-glanceclient
