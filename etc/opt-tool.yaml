@@ -4,7 +4,9 @@ packages:
       - api:
         - version: 1
           entity:
-            - controller
+            - controller:
+                - get_image_meta
+                - get_active_image_meta
             - images
             - members
             - router
@@ -12,7 +14,14 @@ packages:
           entity:
             - images
             - router
-      - db
-      - common
-      - registry
+      - db:
+      - common:
+      - registry:
   - name: python-glanceclient
+    components:
+      - glanceclient:
+        - version: 1
+          entity:
+            - image_members
+            - images
+output_dir: /tmp/test_opt_tool
