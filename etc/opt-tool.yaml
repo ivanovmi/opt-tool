@@ -2,16 +2,20 @@ packages:
   - name: glance
     components:
       - api:
-        - version: 1
-          entity:
+        - v1:
+          - entity:
             - controller:
                 - get_image_meta
                 - get_active_image_meta
             - images
             - members
             - router
-        - version: 2
-          entity:
+        - v2:
+          - model:
+            - entity:
+              - metadef_object
+              - metadef_tag
+          - entity:
             - images
             - router
       - db:
