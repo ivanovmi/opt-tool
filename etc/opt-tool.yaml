@@ -24,8 +24,8 @@ packages:
   - name: python-glanceclient
     components:
       - glanceclient:
-        - version: 1
-          entity:
+        - v1:
+          - entity:
             - image_members
             - images
 output_dir: /tmp/test_opt_tool

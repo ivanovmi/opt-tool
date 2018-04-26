@@ -14,12 +14,18 @@ def generate_entity():
     pass
 
 
+def generate_init(dir_name):
+    filename = str(dir_name) + '/' + '__init__.py'
+    with open(filename, 'w+'):
+        print('Creating init file in package {}...'.format(dir_name))
+
+
 def generate_packages(pkg_name, dir_name=''):
     if isinstance(pkg_name, list):
         for el in pkg_name:
             generate_packages(pkg_name[pkg_name.index(el)], dir_name)
     else:
-        try:
+        if pkg_name is not None:
             for pkg in pkg_name:
                 _pkg = None
                 if isinstance(pkg, dict):
@@ -29,10 +35,9 @@ def generate_packages(pkg_name, dir_name=''):
                     print(dir_n)
                     make_directory(dir_n)
                     generate_packages(pkg_name[pkg], dir_n)
+                    generate_init(dir_n)
                 else:
                     generate_entity()
-        except TypeError:
-            pass
 
 
 def generate_directories(config):
