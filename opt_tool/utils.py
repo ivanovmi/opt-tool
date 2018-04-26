@@ -62,9 +62,8 @@ def generate_packages(pkg_name, dir_name=''):
     else:
         if pkg_name is not None:
             for pkg in pkg_name:
-                _pkg = None
                 if isinstance(pkg, dict):
-                    _pkg, pkg = pkg, list(pkg.keys())[0]
+                    pkg = list(pkg.keys())[0]
                 if pkg != 'entity':
                     dir_n = dir_name + '/' + str(pkg)
                     make_directory(dir_n)
@@ -110,7 +109,7 @@ except ImportError:
 
 setuptools.setup(
     setup_requires=['pbr>=2.0.0'],
-    pbr=True)'''
+    pbr=True)\n'''
         setup_py.write(string)
 
 
