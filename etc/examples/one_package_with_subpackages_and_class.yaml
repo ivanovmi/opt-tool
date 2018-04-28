@@ -1,0 +1,11 @@
+packages:
+  - name: glance
+    components:
+      - api:
+        - v1:
+          - entity:
+            - controller:
+                - get_image_meta
+                - get_active_image_meta
+output_dir: /tmp/test_opt_tool
+

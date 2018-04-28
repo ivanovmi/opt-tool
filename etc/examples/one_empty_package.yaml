@@ -1,0 +1,5 @@
+packages:
+  - name: glance
+    components:
+output_dir: /tmp/test_opt_tool
+

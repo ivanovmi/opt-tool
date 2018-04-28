@@ -1,0 +1,10 @@
+packages:
+  - name: python-glanceclient
+    components:
+      - glanceclient:
+        - v1:
+          - entity:
+            - image_members
+            - images
+output_dir: /tmp/test_opt_tool
+

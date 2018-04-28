@@ -1,0 +1,7 @@
+packages:
+  - name: glance
+    components:
+  - name: python-glanceclient
+    components:
+output_dir: /tmp/test_opt_tool
+

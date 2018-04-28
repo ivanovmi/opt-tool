@@ -1,0 +1,9 @@
+packages:
+  - name: glance
+    components:
+      - api:
+      - db:
+      - common:
+      - registry:
+output_dir: /tmp/test_opt_tool
+

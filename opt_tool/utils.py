@@ -118,5 +118,6 @@ def generate_directories(config):
         _dir = str(config.output_dir) + str(package['name'])
         make_directory(_dir)
         generate_setup(package, _dir)
-        for component in package['components']:
-            generate_packages(component, _dir)
+        if package['components']:
+            for component in package['components']:
+                generate_packages(component, _dir)
